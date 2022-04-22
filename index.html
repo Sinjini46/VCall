@@ -1,0 +1,56 @@
+<script>
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+
+  script.addEventListener("load", function (event) {
+    const config = {
+      name: " ",
+      meetingId: "milkway",
+      apiKey: "5d7df65c-ca69-4548-83ff-845d783bc68e",
+
+      containerId: null,
+
+      joinScreen: {
+        visible: true,
+        title: "Meeting URL",
+        meetingUrl: "sinjini46.github.io/VCallApp/",
+      },
+      permissions: {
+        pin: true,
+      },
+      permissions: {
+       
+        removeParticipant: true,
+      },
+      permissions: {
+     
+        endMeeting: true,
+      },
+      permissions: {
+        askToJoin: true,
+        toggleParticipantWebcam: false,
+        toggleParticipantMic: false,
+    },
+      whiteboardEnabled: true,
+      permissions: {
+
+        drawOnWhiteboard: true,
+        toggleWhiteboard: true,
+      },
+      micEnabled: true,
+      webcamEnabled: true,
+      participantCanToggleSelfWebcam: true,
+      participantCanToggleSelfMic: true,
+
+      chatEnabled: true,
+      screenShareEnabled: true,
+    };
+
+    const meeting = new VideoSDKMeeting();
+    meeting.init(config);
+  });
+
+  script.src =
+    "https://sdk.videosdk.live/rtc-js-prebuilt/0.3.1/rtc-js-prebuilt.js"
+  document.getElementsByTagName("head")[0].appendChild(script);
+</script>
